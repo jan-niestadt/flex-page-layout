@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>TITLE</title>
+		<style>
+
+#app {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+
+	display: grid;
+	grid-template-rows: auto minmax(0, 1fr);
+	grid-template-columns: 300px auto;
+	grid-template-areas: 
+		"header    header"
+		"lemmalist content";
+}
+
+header {
+	background-color: green;
+	min-height: 6rem;
+	grid-area: header;
+}
+
+aside {
+	background-color: blue;
+	grid-area: lemmalist;
+	position: relative;
+}
+
+aside > div {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+}
+
+article {
+	background-color: yellow;
+	grid-area: content;
+	overflow: auto;
+}
+
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<header>
+				Dit is de header.
+			</header>
+			<aside>
+				<div class='safari-sucks'>
+					<b>Dit is de lemmalist.</b>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacinia quam nibh, non pellentesque mi blandit at. Vestibulum vel fermentum risus. Nulla aliquet venenatis vestibulum. Mauris aliquet ligula ipsum, ut congue nisl lacinia vitae. Curabitur tincidunt nulla quis orci interdum pulvinar. Vestibulum sit amet mauris vel nisi sodales convallis. Suspendisse potenti. Pellentesque hendrerit fringilla orci. Integer maximus efficitur libero, et vestibulum leo dapibus in. Proin volutpat odio eu lorem fermentum iaculis. Ut sollicitudin nulla elementum tellus pharetra, ac imperdiet tortor malesuada. Aenean urna dolor, porttitor lobortis porttitor eu, rutrum et risus. Morbi sodales pellentesque ornare.
+					Sed eu felis diam. Nunc porttitor eros sed lorem pulvinar malesuada. Nullam interdum odio eu dignissim egestas. Phasellus pellentesque, dolor nec consectetur laoreet, augue sem scelerisque magna, ac rutrum nibh nisl ac eros. Aenean porttitor posuere elit. Cras a tortor et nisl convallis vehicula non sed risus. Mauris ligula diam, semper non tellus nec, ultrices eleifend lorem. Suspendisse quis massa quis eros convallis tempus at ac lacus.
+					Donec a est venenatis, vulputate ipsum id, dignissim nibh. Curabitur id nunc ornare, luctus nisl id, eleifend diam. Cras ac nibh mi. Fusce molestie condimentum nunc, a interdum mauris molestie eget. Proin placerat lacinia ante, at venenatis est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed in eleifend tellus. Aenean iaculis at urna at facilisis. Proin eget mi justo. Suspendisse vulputate ipsum sed lobortis vehicula. Cras id odio sed leo fermentum porttitor nec sit amet massa. Donec tristique interdum egestas. Nulla cursus leo arcu, ut pretium lectus commodo sed. Fusce sollicitudin felis vestibulum consequat viverra. In suscipit quis lorem ut dictum.
+					Mauris ullamcorper eget sapien at hendrerit. Sed in arcu quis ligula efficitur bibendum. Integer vestibulum libero fringilla tellus faucibus gravida. Phasellus dignissim urna magna, ut pharetra dui tincidunt sit amet. Pellentesque a eros nec dolor condimentum condimentum. Integer lacinia arcu et ultrices venenatis. Cras bibendum lorem non velit tincidunt ultrices. Maecenas vel commodo sapien.
+					Vivamus ac finibus odio. Suspendisse porttitor, arcu id pulvinar tincidunt, ante ante ultrices lectus, ac semper nibh odio eu est. Phasellus ultricies tempor nisi. Pellentesque varius justo non turpis volutpat convallis. Mauris at lorem enim. Vestibulum at nibh at orci pharetra dapibus. Proin porta dui lectus, ut gravida justo molestie id. Donec iaculis varius elit id blandit. Suspendisse id odio suscipit ipsum volutpat eleifend vitae a urna. 				
+				</div>
+			</aside>
+			<article>
+				<div class='safari-sucks'>
+					<b>Dit is de main content.</b>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacinia quam nibh, non pellentesque mi blandit at. Vestibulum vel fermentum risus. Nulla aliquet venenatis vestibulum. Mauris aliquet ligula ipsum, ut congue nisl lacinia vitae. Curabitur tincidunt nulla quis orci interdum pulvinar. Vestibulum sit amet mauris vel nisi sodales convallis. Suspendisse potenti. Pellentesque hendrerit fringilla orci. Integer maximus efficitur libero, et vestibulum leo dapibus in. Proin volutpat odio eu lorem fermentum iaculis. Ut sollicitudin nulla elementum tellus pharetra, ac imperdiet tortor malesuada. Aenean urna dolor, porttitor lobortis porttitor eu, rutrum et risus. Morbi sodales pellentesque ornare.
+					Sed eu felis diam. Nunc porttitor eros sed lorem pulvinar malesuada. Nullam interdum odio eu dignissim egestas. Phasellus pellentesque, dolor nec consectetur laoreet, augue sem scelerisque magna, ac rutrum nibh nisl ac eros. Aenean porttitor posuere elit. Cras a tortor et nisl convallis vehicula non sed risus. Mauris ligula diam, semper non tellus nec, ultrices eleifend lorem. Suspendisse quis massa quis eros convallis tempus at ac lacus.
+					Donec a est venenatis, vulputate ipsum id, dignissim nibh. Curabitur id nunc ornare, luctus nisl id, eleifend diam. Cras ac nibh mi. Fusce molestie condimentum nunc, a interdum mauris molestie eget. Proin placerat lacinia ante, at venenatis est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed in eleifend tellus. Aenean iaculis at urna at facilisis. Proin eget mi justo. Suspendisse vulputate ipsum sed lobortis vehicula. Cras id odio sed leo fermentum porttitor nec sit amet massa. Donec tristique interdum egestas. Nulla cursus leo arcu, ut pretium lectus commodo sed. Fusce sollicitudin felis vestibulum consequat viverra. In suscipit quis lorem ut dictum.
+					Mauris ullamcorper eget sapien at hendrerit. Sed in arcu quis ligula efficitur bibendum. Integer vestibulum libero fringilla tellus faucibus gravida. Phasellus dignissim urna magna, ut pharetra dui tincidunt sit amet. Pellentesque a eros nec dolor condimentum condimentum. Integer lacinia arcu et ultrices venenatis. Cras bibendum lorem non velit tincidunt ultrices. Maecenas vel commodo sapien.
+					Vivamus ac finibus odio. Suspendisse porttitor, arcu id pulvinar tincidunt, ante ante ultrices lectus, ac semper nibh odio eu est. Phasellus ultricies tempor nisi. Pellentesque varius justo non turpis volutpat convallis. Mauris at lorem enim. Vestibulum at nibh at orci pharetra dapibus. Proin porta dui lectus, ut gravida justo molestie id. Donec iaculis varius elit id blandit. Suspendisse id odio suscipit ipsum volutpat eleifend vitae a urna. 				
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacinia quam nibh, non pellentesque mi blandit at. Vestibulum vel fermentum risus. Nulla aliquet venenatis vestibulum. Mauris aliquet ligula ipsum, ut congue nisl lacinia vitae. Curabitur tincidunt nulla quis orci interdum pulvinar. Vestibulum sit amet mauris vel nisi sodales convallis. Suspendisse potenti. Pellentesque hendrerit fringilla orci. Integer maximus efficitur libero, et vestibulum leo dapibus in. Proin volutpat odio eu lorem fermentum iaculis. Ut sollicitudin nulla elementum tellus pharetra, ac imperdiet tortor malesuada. Aenean urna dolor, porttitor lobortis porttitor eu, rutrum et risus. Morbi sodales pellentesque ornare.
+					Sed eu felis diam. Nunc porttitor eros sed lorem pulvinar malesuada. Nullam interdum odio eu dignissim egestas. Phasellus pellentesque, dolor nec consectetur laoreet, augue sem scelerisque magna, ac rutrum nibh nisl ac eros. Aenean porttitor posuere elit. Cras a tortor et nisl convallis vehicula non sed risus. Mauris ligula diam, semper non tellus nec, ultrices eleifend lorem. Suspendisse quis massa quis eros convallis tempus at ac lacus.
+					Donec a est venenatis, vulputate ipsum id, dignissim nibh. Curabitur id nunc ornare, luctus nisl id, eleifend diam. Cras ac nibh mi. Fusce molestie condimentum nunc, a interdum mauris molestie eget. Proin placerat lacinia ante, at venenatis est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed in eleifend tellus. Aenean iaculis at urna at facilisis. Proin eget mi justo. Suspendisse vulputate ipsum sed lobortis vehicula. Cras id odio sed leo fermentum porttitor nec sit amet massa. Donec tristique interdum egestas. Nulla cursus leo arcu, ut pretium lectus commodo sed. Fusce sollicitudin felis vestibulum consequat viverra. In suscipit quis lorem ut dictum.
+					Mauris ullamcorper eget sapien at hendrerit. Sed in arcu quis ligula efficitur bibendum. Integer vestibulum libero fringilla tellus faucibus gravida. Phasellus dignissim urna magna, ut pharetra dui tincidunt sit amet. Pellentesque a eros nec dolor condimentum condimentum. Integer lacinia arcu et ultrices venenatis. Cras bibendum lorem non velit tincidunt ultrices. Maecenas vel commodo sapien.
+					Vivamus ac finibus odio. Suspendisse porttitor, arcu id pulvinar tincidunt, ante ante ultrices lectus, ac semper nibh odio eu est. Phasellus ultricies tempor nisi. Pellentesque varius justo non turpis volutpat convallis. Mauris at lorem enim. Vestibulum at nibh at orci pharetra dapibus. Proin porta dui lectus, ut gravida justo molestie id. Donec iaculis varius elit id blandit. Suspendisse id odio suscipit ipsum volutpat eleifend vitae a urna. 				
+				</div>
+			</header>
+		</div>
+	</body>
+</html>
